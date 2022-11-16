@@ -13,9 +13,16 @@ app.get('/', (req, res)=>{
     res.redirect('/drinks')
 })
 
-// Index
+// Index route
 app.get('/drinks', (req, res)=>{
     res.render('drinks_index.ejs', {drinks})
+})
+
+// Show route
+app.get('/drinks/:indexOfDrink', (req, res)=>{
+
+    res.send(drinks[req.params.indexOfDrink])
+
 })
 
 
