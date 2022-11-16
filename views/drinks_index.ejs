@@ -9,6 +9,14 @@
 <body>
     <h1>Welcome to gitpub</h1>
 
+    <ul>
+        <% drinks.forEach((drink) => { %>
+
+            <li><%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %></li>
+
+        <% }) %>
+    </ul>
+
     <style>
         body{
             color: blanchedalmond;
